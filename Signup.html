@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <script type="text/javascript">
+        function validation(){
+           var uid=document.getElementById('user'),value;
+           var pas=document.getElementById('pass').value;
+           var cpas=document.getElementById('cpass').value;
+           var ma=document.getElementById('mail').value;
+
+    if(pas!==cpas)
+    {
+            alert("Password doesnt match");
+            return false;
+    }
+    if((pas.length <= 5) || (pas.length > 20)) {
+				alert("Passwords length must be between 5 and 20");
+				return false;	
+			}
+
+        }
+        </script>
+</head>
+    <body>
+    <div class="SignUp-box">                                                             
+    <img src="up.jpg" class="avatar">
+        <h1>Sign Up</h1>
+           <form name="fname" action="#" onsubmit="return validation()" >
+            <p>Username</p>
+            <input type="text" name="username" id="user" placeholder="Enter Username" required>
+            <p>Email</p>
+            <input type="email" name="email" id="mail" placeholder="Enter email Id" required>
+            <p>Password</p>
+            <input type="password" name="password" id="pass" placeholder="Enter Password" required>
+            <p>Confirm Password</p>
+            <input type="password" name="password" id="cpass" placeholder="Enter Password again" required>
+            <input type="submit" name="submit" value="SignUp">
+          <a href="index.html">Already Have an Account?Login..</a>            
+            </form>
+        
+        
+        </div>
+       
+    </body>
+</html>
